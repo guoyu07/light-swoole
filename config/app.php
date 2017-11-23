@@ -10,6 +10,10 @@ return [
 
     'key' => env('APP_KEY'),
 
+    'locale' => 'zh-CN',
+
+    'fallback_locale' => 'en',
+
     'logger_path' => BASE_PATH.DS.'storage'.DS.'logs',
 
 
