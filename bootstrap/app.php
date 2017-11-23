@@ -30,6 +30,6 @@ $connection->setAsGlobal();
 
 // Using Laravel Validation 
 
-$validator = \LightSwoole\Framework\Validator::make(['name' => '', 'password' => '1234', 'phone' => '11000000000'], ['name' => 'required', 'password' => 'required|min:6', 'phone' => 'cellphone']);
+$validator = \LightSwoole\Framework\Validator::make(['id' => '1', 'password' => '1234', 'phone' => '11000000000'], ['id' => 'required|exists:articles,id', 'password' => 'required|min:6', 'phone' => 'cellphone']);
 var_dump($validator->messages());
 

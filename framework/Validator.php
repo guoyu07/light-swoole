@@ -32,8 +32,8 @@ class Validator
             $database = config('database.connections.'.$driver);
             $connection = new DB();
             $connection->addConnection($database);
-            $connection->bootEloquent();
-            $connection->setAsGlobal();
+            // $connection->bootEloquent();
+            // $connection->setAsGlobal();
             $factory->setPresenceVerifier(new DatabasePresenceVerifier($connection->getDatabaseManager()));
 
             // Validate cellphone number in mainland China
