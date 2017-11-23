@@ -1,0 +1,22 @@
+{
+    "name": "qianchang/light-swoole",
+    "description": "Light Swoole Framework For Web Artisans !",
+    "homepage": "https://github.com/qianchang-network/light-swoole",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "qianchang",
+            "email": "qianchang021@vip.qq.com",
+            "homepage": "http://www.qc021.com/"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/validation": "5.5.*",
+        "illuminate/translation": "5.5.*",
+        "illuminate/database": "5.5.*",
+        "guzzlehttp/guzzle": "^6.3",
+        "vlucas/phpdotenv": "^2.4"
+    }
+}
