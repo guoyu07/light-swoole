@@ -8,7 +8,7 @@ use Monolog\Handler\StreamHandler;
 class Log
 {
 
-    protected static $type = ['log', 'error', 'info', 'sql', 'notice', 'alert', 'debug'];
+    protected static $type = ['debug', 'info', 'notice', 'warnnig', 'err', 'error', 'crit', 'critical', 'alert', 'emerg', 'emergency'];
 
     public function __construct()
     {
