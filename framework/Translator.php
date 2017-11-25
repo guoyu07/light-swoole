@@ -38,7 +38,7 @@ class Translator
         return $this->translator->trans($id, $parameters, $locale);
     }
 
-    public function trans_choice($id, $number, array $parameters = [], $locale = null)
+    public function transChoice($id, $number, array $parameters = [], $locale = null)
     {
         if (is_null($locale)) {
             $locale = config('app.locale', 'en');
