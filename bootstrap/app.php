@@ -1,8 +1,5 @@
 <?php
 
-$timezone = config('app.timezone', 'Asia/Shanghai');
-date_default_timezone_set($timezone);
-
 // Load Dotenv
 
 $dotenv = new Dotenv\Dotenv(__DIR__.'/../');
@@ -14,22 +11,9 @@ $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
 
-// Using Laravel Translator
+$app = new LightSwoole\Framework\Application();
+$app->init();
 
-$welcome = trans('message.welcome');
-var_dump($welcome);
+require_once APP_PATH.DS.'Http'.DS.'route.php';
 
-// Using Laravel DB and Eloquent
-
-$driver = config('database.default', 'mysql');
-$database = config('database.connections.'.$driver);
-$connection = new \LightSwoole\Framework\DB();
-$connection->addConnection($database);
-$connection->bootEloquent();
-$connection->setAsGlobal();
-
-// Using Laravel Validation 
-
-$validator = \LightSwoole\Framework\Validator::make(['id' => '1', 'password' => '1234', 'phone' => '11000000000'], ['id' => 'required|exists:articles,id', 'password' => 'required|min:6', 'phone' => 'cellphone']);
-var_dump($validator->messages());
-
+return $app;
