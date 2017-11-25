@@ -6,7 +6,7 @@ return [
 
     'debug' => env('APP_DEBUG', false),
 
-    'timezone' => 'Asia/Shanghai',
+    'timezone' => env('APP_TIMEZONE', 'Asia/Shanghai'),
 
     'key' => env('APP_KEY'),
 
