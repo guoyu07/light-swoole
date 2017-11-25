@@ -21,15 +21,17 @@
         ]
     },
     "require": {
-        "php": ">=5.5.9",
-        "illuminate/validation": "5.4.*",
-        "illuminate/translation": "5.4.*",
-        "illuminate/database": "5.4.*",
+        "php": "^7.0",
+        "illuminate/validation": "5.5.*",
+        "illuminate/translation": "5.5.*",
+        "illuminate/database": "5.5.*",
         "guzzlehttp/guzzle": "^6.3",
         "vlucas/phpdotenv": "^2.4",
         "filp/whoops": "^2.1",
         "monolog/monolog": "^1.23",
         "hassankhan/config": "^0.11.2",
-        "league/route": "^3.0"
+        "league/route": "^3.0",
+        "league/container": "^2.4",
+        "zendframework/zend-diactoros": "^1.6"
     }
 }
