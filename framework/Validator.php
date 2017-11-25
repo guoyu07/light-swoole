@@ -7,21 +7,34 @@ use Illuminate\Validation\DatabasePresenceVerifier;
 use LightSwoole\Framework\DB;
 use LightSwoole\Framework\Translator;
 
-
+/**
+ * Class Validator
+ *
+ * @package LightSwoole\Framework
+ * @author raoyc <raoyc2009@gmaill.com>
+ * @link   https://raoyc.com
+ */
 class Validator
 {
+    /**
+     * Laravel Validation Factory
+     * 
+     * @var null|Illuminate\Validation\Factory
+     */
     private static $factory = null;
 
     /**
      * using Laravel Validation
      *
-     * See https://laravel.com/docs/5.4/validation#available-validation-rules
+     * See https://laravel.com/docs/5.5/validation#available-validation-rules
      *
      * @param array $data
      * @param array $rules
-     * @return \Illuminate\Validation\Factory
+     * @param  array  $messages
+     * @param  array  $customAttributes
+     * @return \Illuminate\Contracts\Validation\Validator
      */
-    public static function make($data, $rules)
+    public static function make(array $data, array $rules, array $messages = [], array $customAttributes = [])
     {
         if (self::$factory === null) {
             $instanace = app('translator')->getInstance();

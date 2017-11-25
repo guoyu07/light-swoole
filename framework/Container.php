@@ -15,14 +15,15 @@ class Container
 {
 
     /**
-     * @var static
+     * Container instance
+     * @var null|League\Container\Container
      */
     public static $instance = null;
 
     /**
      * Set the globally available instance of the container.
      *
-     * @return static
+     * @return League\Container\Container
      */
     public static function getInstance()
     {
