@@ -1,14 +1,15 @@
 # LightSwoole
 
->   LightSwoole - experience the dual pleasure of combining Laravel with Swoole. Light-weight and design for services.
+>   LightSwoole - 体验 `Laravel` 与 `Swoole` 结合的 双重快感，轻型专为服务而生。
 
-## Laravel Components
+
+## Laravel 组件依赖
 
 ### Database
 
->   You can see official documentation at https://laravel.com/docs/5.5/database .
+>   您可以从官方网站  https://laravel.com/docs/5.5/database 获取帮助文档。
 
-You can use Laravel Database in 2 ways:
+使用 `Laravel Database` 2 种示例方法：
 
 ```php
 use LightSwoole\Framework\DB;
@@ -21,9 +22,9 @@ container('db')->('articles')->where('id', 1)->first();
 
 ### Validation
 
->   You can see official documentation at https://laravel.com/docs/5.5/validation .
+>   您可以从官方网站 https://laravel.com/docs/5.5/validation 获取帮助文档。
 
-You can use Laravel Validation in 3 ways:
+使用 `Laravel Validation` 3 种示例方法:
 
 ```php
 use LightSwoole\Framework\Validator;
@@ -60,9 +61,9 @@ container('validator')->make(...);
 
 ### Translator
 
->   You can see official documentation at https://laravel.com/docs/5.5/localization .
+>   您可以从官方网站 https://laravel.com/docs/5.5/localization 获取帮助文档。
 
-Using Laravel Translator below: 
+参考示例使用 `Laravel Translator` ： 
 
 ```php
 trans('message.welcome');
@@ -70,23 +71,23 @@ trans_choice('message.apples', 10);
 trans_choice('message.bananas', 12);
 ```
 
-You can see localization files in `resources/lang` directory.
+您可以在 `resources/lang` 目录找到本地化配置文件。
 
-## Other Components
+## 其他组件
 
-### PHP errors for cool kids (filp/whoops)
+### PHP 抛错 (filp/whoops)
 
->   just see at https://github.com/filp/whoops .
+>   参考 https://github.com/filp/whoops .
 
 ### DotEnv (vlucas/phpdotenv)
 
->   Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically. Just see at https://github.com/vlucas/phpdotenv .
+>   自动化从 `env` 文件加载环境变量，参考 https://github.com/vlucas/phpdotenv 。
 
-### Logger (monolog/monolog)
+### 日志 (monolog/monolog)
 
->   Sends your logs to files, sockets, inboxes, databases and various web services. Just see at https://github.com/Seldaek/monolog .
+>   发送您的日志到多种服务（如 文件、 套接字、数据库等），参考 https://github.com/Seldaek/monolog 。
 
-Usage Example:
+使用示例：
 
 ```php
 use LightSwoole\Framework\Log;
@@ -104,23 +105,23 @@ logger()->debug('just for debug!');  // = Log::debug('debug');
 logger()->info('hello world!');  // = Log::info('hello world');
 ```
 
-Normally you can see logs in `storage/logs` directory.
+通常您可以在 `storage/logs` 目录看到日志文件。
 
-### Config (hassankhan/config)
+### 配置 (hassankhan/config)
 
->   Config is a lightweight configuration file loader that supports PHP, INI, XML, JSON, and YAML files. Just see at https://github.com/hassankhan/config .
+>   轻型的配置文件加载器，支持多种文件格式（如 `PHP`、 `INI`、`XML`、 `JSON`、 以及 `YAML` 等）， 参考 https://github.com/hassankhan/config 。
 
-Usage Example:
+使用示例：
 
 ```php
 config('app.timezone');
 ```
 
-### Request and Response (zendframework/zend-diactoros)
+### 请求与相应 (zendframework/zend-diactoros)
 
->   Just see at https://github.com/zendframework/zend-diactoros .
+>   参考 https://github.com/zendframework/zend-diactoros 。
 
-Usage Example:
+使用示例：
 
 ```php
 request();
@@ -134,11 +135,11 @@ response_json();
 response_empty();
 ```
 
-### Route (league/route)
+### 路由 (league/route)
 
->   Fast router and dispatcher built on top of FastRoute. Just see at https://github.com/thephpleague/route and http://route.thephpleague.com/ .
+>   基于 FastRoute 构建的快速路由分发器，参考 https://github.com/thephpleague/route 和 http://route.thephpleague.com/ 。
 
-Usage Example:
+使用示例：
 
 ```php
 use Psr\Http\Message\ResponseInterface;
@@ -150,12 +151,14 @@ $route->get('/', function (ServerRequestInterface $request, ResponseInterface $r
 });
 ```
 
-### Container (league/container)
+### 容器 (league/container)
 
->   Small but powerful dependency injection container. Just see at https://github.com/thephpleague/container and http://container.thephpleague.com/ .
+>   轻型依赖注入容器，参考 https://github.com/thephpleague/container 和 http://container.thephpleague.com/ .
 
 
-## Restful API Service Example
+## Restful API 服务示例
 
-A `restful api` service example have been offered. 
-See similar documentation at [TinyMe api-service](https://github.com/ycrao/tinyme#api-service) to demonstrate it.
+我们提供一个 `restful api` 服务示例，参考同类文档 
+[TinyMe api 服务](https://github.com/ycrao/tinyme/blob/master/README_zh-CN.md#api-服务) 去演练它。
+
+
