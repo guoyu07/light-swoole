@@ -2,6 +2,7 @@
 
 >   LightSwoole - 体验 `Laravel` 与 `Swoole` 结合的 双重快感，轻型专为服务而生。
 
+[English README](README.md)
 
 ## Laravel 组件依赖
 

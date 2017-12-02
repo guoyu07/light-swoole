@@ -2,6 +2,8 @@
 
 >   LightSwoole - experience the dual pleasure of combining Laravel with Swoole. Light-weight and design for services.
 
+[简体中文读我](README_zh-CN.md)
+
 ## Laravel Components
 
 ### Database
