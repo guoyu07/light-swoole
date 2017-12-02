@@ -118,7 +118,7 @@ logger()->info('hello world!');  // = Log::info('hello world');
 config('app.timezone');
 ```
 
-### 请求与相应 (zendframework/zend-diactoros)
+### 请求与响应 (zendframework/zend-diactoros)
 
 >   参考 https://github.com/zendframework/zend-diactoros 。
 
