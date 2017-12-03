@@ -16,5 +16,22 @@ return [
 
     'logger_path' => BASE_PATH.DS.'storage'.DS.'logs',
 
+    'providers' => [
+
+        /*
+         * Application Service Providers...
+         */
+        App\Providers\RouteServiceProvider::class,
+    ],
+
+    /**
+     * Facade class aliases
+     */
+    'aliases' => [
+
+        // To add some Facade class
+        
+
+    ],
 
 ];
