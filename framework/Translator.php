@@ -8,7 +8,8 @@ use Illuminate\Translation\Translator as LaravelTranslator;
 
 /**
  * Class Translator
- * 
+ *
+ * @package LightSwoole\Framework
  * @author raoyc <raoyc2009@gmaill.com>
  * @link   https://raoyc.com
  */
@@ -22,6 +23,13 @@ class Translator
     private $translator = null;
 
     /**
+     * locale
+     * 
+     * @var null|string
+     */
+    private $locale = null;
+
+    /**
      * __construct
      *
      * @return void
@@ -30,6 +38,7 @@ class Translator
     {
         if ($this->translator === null) {
             $locale = config('app.locale', 'en');
+            $this->locale = $locale;
             $fallback_locale = config('app.fallback_locale', 'en');
             $filesystem = new Filesystem();
             $fileLoader = new FileLoader($filesystem, BASE_PATH.DS.'resources'.DS.'lang');
@@ -59,10 +68,7 @@ class Translator
      */
     public function trans($id, $parameters = [], $locale = null)
     {
-        if (is_null($locale)) {
-            $locale = config('app.locale', 'en');
-        }
-        return $this->translator->trans($id, $parameters, $locale);
+        return $this->translator->trans($id, $parameters, (is_null($locale) ? $this->locale : $locale));
     }
 
     /**
@@ -76,9 +82,6 @@ class Translator
      */
     public function transChoice($id, $number, array $parameters = [], $locale = null)
     {
-        if (is_null($locale)) {
-            $locale = config('app.locale', 'en');
-        }
-        return $this->translator->transChoice($id, $number, $parameters, $locale);
+        return $this->translator->transChoice($id, $number, $parameters, (is_null($locale) ? $this->locale : $locale));
     }
 }

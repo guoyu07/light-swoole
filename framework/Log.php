@@ -28,7 +28,7 @@ class Log
      */
     private static function write($type = 'log', $message, array $data = [])
     {
-        return app('log')->$type($message, $data);
+        return logger()->$type($message, $data);
     }
 
     /**

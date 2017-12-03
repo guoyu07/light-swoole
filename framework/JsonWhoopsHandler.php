@@ -8,6 +8,13 @@ use Whoops\Handler\Handler;
 use League\Route\Http\Exception\HttpExceptionInterface;
 
 
+/**
+ * Class JsonWhoopsHandler
+ * 
+ * @package LightSwoole\Framework
+ * @author raoyc <raoyc2009@gmaill.com>
+ * @link   https://raoyc.com
+ */
 class JsonWhoopsHandler extends Handler
 {
 

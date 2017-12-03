@@ -4,12 +4,12 @@ namespace LightSwoole\Framework;
 
 
 /**
-  * Request Application
-  *
-  * @package LightSwoole\Framework
-  * @author raoyc <raoyc2009@gmaill.com>
-  * @link   https://raoyc.com
-  */
+ * Class Request
+ *
+ * @package LightSwoole\Framework
+ * @author raoyc <raoyc2009@gmaill.com>
+ * @link   https://raoyc.com
+ */
 class Request
 {
 
