@@ -1,6 +1,6 @@
 {
     "name": "qianchang/light-swoole",
-    "description": "Light Swoole Framework For Web Artisans !",
+    "description": "Light-weight framework with some Laravel components and run in Swoole!",
     "homepage": "https://github.com/qianchang-network/light-swoole",
     "type": "project",
     "license": "MIT",
@@ -32,6 +32,8 @@
         "hassankhan/config": "^0.11.2",
         "league/route": "^3.0",
         "league/container": "^2.4",
-        "zendframework/zend-diactoros": "^1.6"
+        "zendframework/zend-diactoros": "^1.6",
+        "douyasi/identity-card": "~2.0",
+        "symfony/console": "^3.3"
     }
 }
