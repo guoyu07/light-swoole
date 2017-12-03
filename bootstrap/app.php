@@ -8,12 +8,16 @@ $dotenv->load();
 // Using whoops
 
 $whoops = new \Whoops\Run;
-$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+if (env('APP_DEBUG')) {
+    $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+} else {
+    $whoops->pushHandler(new \LightSwoole\Framework\JsonWhoopsHandler);
+}
 $whoops->register();
 
-$app = new LightSwoole\Framework\Application();
-$app->init();
 
-require_once APP_PATH.DS.'Http'.DS.'route.php';
-
+$container = container();
+$container->share('app', LightSwoole\Framework\Application::class);
+$app = $container->get('app')->init();
+// $app->withFacades(true);
 return $app;
